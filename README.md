@@ -113,7 +113,15 @@ The requirement for testnet:
 
 #### 1. Download the pre-build binaries
 ```shell
-# Linux
+# Linux# Linux
+wget $(curl -s https://api.github.com/repos/bnb-chain/bsc/releases/latest |grep browser_ |grep geth_linux |cut -d\" -f4)
+mv geth_linux geth
+chmod -v u+x geth
+
+# MacOS
+wget $(curl -s https://api.github.com/repos/bnb-chain/bsc/releases/latest |grep browser_ |grep geth_mac |cut -d\" -f4)
+mv geth_macos geth
+chmod -v u+x geth
 wget $(curl -s https://api.github.com/repos/bnb-chain/bsc/releases/latest |grep browser_ |grep geth_linux |cut -d\" -f4)
 mv geth_linux geth
 chmod -v u+x geth
@@ -149,7 +157,7 @@ Download latest chaindata snapshot from [here](https://github.com/bnb-chain/bsc-
 
 #### 5. Monitor node status
 
-Monitor the log from **./node/bsc.log** by default. When the node has started syncing, should be able to see the following output:
+Monitor the log from "**./node/bsc.log**" by default. When the node has started syncing, should be able to see the following output:
 ```shell
 t=2022-09-08T13:00:27+0000 lvl=info msg="Imported new chain segment"             blocks=1    txs=177   mgas=17.317   elapsed=31.131ms    mgasps=556.259  number=21,153,429 hash=0x42e6b54ba7106387f0650defc62c9ace3160b427702dab7bd1c5abb83a32d8db dirty="0.00 B"
 t=2022-09-08T13:00:29+0000 lvl=info msg="Imported new chain segment"             blocks=1    txs=251   mgas=39.638   elapsed=68.827ms    mgasps=575.900  number=21,153,430 hash=0xa3397b273b31b013e43487689782f20c03f47525b4cd4107c1715af45a88796e dirty="0.00 B"
